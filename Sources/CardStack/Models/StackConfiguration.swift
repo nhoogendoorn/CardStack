@@ -9,9 +9,8 @@
 import SwiftUI
 
 open class StackConfiguration {
-    enum StackStyle {
-        case sameHeight, decreasingHeight
-    }
+    
+    public init() {}
     
     var minimumSwipingDistance: CGFloat = 0
     var numberOfCardsShown: Int = 3

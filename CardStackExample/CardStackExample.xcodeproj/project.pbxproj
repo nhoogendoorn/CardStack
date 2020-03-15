@@ -3,27 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A626ED4A241E7B6D00CE6A68 /* CardStack in Frameworks */ = {isa = PBXBuildFile; productRef = A626ED49241E7B6D00CE6A68 /* CardStack */; };
 		A6F9714C241E639900374CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F9714B241E639900374CF8 /* AppDelegate.swift */; };
 		A6F9714E241E639900374CF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F9714D241E639900374CF8 /* SceneDelegate.swift */; };
-		A6F97150241E639900374CF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F9714F241E639900374CF8 /* ContentView.swift */; };
 		A6F97152241E639E00374CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F97151241E639E00374CF8 /* Assets.xcassets */; };
 		A6F97155241E639E00374CF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F97154241E639E00374CF8 /* Preview Assets.xcassets */; };
 		A6F97158241E639E00374CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F97156241E639E00374CF8 /* LaunchScreen.storyboard */; };
+		A6F97165241E65B000374CF8 /* DataExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F97164241E65B000374CF8 /* DataExample.swift */; };
+		A6F97167241E65D000374CF8 /* CardExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F97166241E65D000374CF8 /* CardExampleView.swift */; };
+		A6F97169241E65E200374CF8 /* StackExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F97168241E65E200374CF8 /* StackExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A6F97148241E639900374CF8 /* CardStackExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardStackExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F9714B241E639900374CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6F9714D241E639900374CF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A6F9714F241E639900374CF8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A6F97151241E639E00374CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F97154241E639E00374CF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A6F97157241E639E00374CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6F97159241E639E00374CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6F97164241E65B000374CF8 /* DataExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExample.swift; sourceTree = "<group>"; };
+		A6F97166241E65D000374CF8 /* CardExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExampleView.swift; sourceTree = "<group>"; };
+		A6F97168241E65E200374CF8 /* StackExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A626ED4A241E7B6D00CE6A68 /* CardStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +62,10 @@
 		A6F9714A241E639900374CF8 /* CardStackExample */ = {
 			isa = PBXGroup;
 			children = (
+				A6F97163241E659300374CF8 /* Views */,
+				A6F97162241E658D00374CF8 /* Models */,
 				A6F9714B241E639900374CF8 /* AppDelegate.swift */,
 				A6F9714D241E639900374CF8 /* SceneDelegate.swift */,
-				A6F9714F241E639900374CF8 /* ContentView.swift */,
 				A6F97151241E639E00374CF8 /* Assets.xcassets */,
 				A6F97156241E639E00374CF8 /* LaunchScreen.storyboard */,
 				A6F97159241E639E00374CF8 /* Info.plist */,
@@ -73,6 +80,23 @@
 				A6F97154241E639E00374CF8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A6F97162241E658D00374CF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6F97164241E65B000374CF8 /* DataExample.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A6F97163241E659300374CF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6F97166241E65D000374CF8 /* CardExampleView.swift */,
+				A6F97168241E65E200374CF8 /* StackExampleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +115,9 @@
 			dependencies = (
 			);
 			name = CardStackExample;
+			packageProductDependencies = (
+				A626ED49241E7B6D00CE6A68 /* CardStack */,
+			);
 			productName = CardStackExample;
 			productReference = A6F97148241E639900374CF8 /* CardStackExample.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +146,9 @@
 				Base,
 			);
 			mainGroup = A6F9713F241E639900374CF8;
+			packageReferences = (
+				A626ED48241E7B6D00CE6A68 /* XCRemoteSwiftPackageReference "CardStack" */,
+			);
 			productRefGroup = A6F97149241E639900374CF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,7 +178,9 @@
 			files = (
 				A6F9714C241E639900374CF8 /* AppDelegate.swift in Sources */,
 				A6F9714E241E639900374CF8 /* SceneDelegate.swift in Sources */,
-				A6F97150241E639900374CF8 /* ContentView.swift in Sources */,
+				A6F97165241E65B000374CF8 /* DataExample.swift in Sources */,
+				A6F97167241E65D000374CF8 /* CardExampleView.swift in Sources */,
+				A6F97169241E65E200374CF8 /* StackExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A626ED48241E7B6D00CE6A68 /* XCRemoteSwiftPackageReference "CardStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nhoogendoorn/CardStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "0.1.0-beta.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A626ED49241E7B6D00CE6A68 /* CardStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A626ED48241E7B6D00CE6A68 /* XCRemoteSwiftPackageReference "CardStack" */;
+			productName = CardStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A6F97140241E639900374CF8 /* Project object */;
 }
