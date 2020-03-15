@@ -9,5 +9,5 @@
 import SwiftUI
 
 public protocol Card: View {
-    public init<CardData: CardInformation>(data: CardData)
+    init<CardData: CardInformation>(data: CardData)
 }

@@ -12,9 +12,7 @@ open class StackConfiguration {
     
     public init() {}
     
-    enum StackStyle {
-        case sameHeight, decreasingHeight
-    }
+    
     
     var minimumSwipingDistance: CGFloat = 0
     var numberOfCardsShown: Int = 3
