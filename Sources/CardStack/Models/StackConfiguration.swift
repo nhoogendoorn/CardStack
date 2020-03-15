@@ -12,8 +12,6 @@ open class StackConfiguration {
     
     public init() {}
     
-    
-    
     var minimumSwipingDistance: CGFloat = 0
     var numberOfCardsShown: Int = 3
     var stackStyle: StackStyle = .decreasingHeight
