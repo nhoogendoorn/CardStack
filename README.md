@@ -7,3 +7,4 @@
 
 A SwiftUI package that lets you implement swipable cards in your project.
  
+![CardStackExample](CardStackExample/CardStackExample.gif)
