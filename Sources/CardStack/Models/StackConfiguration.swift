@@ -9,6 +9,9 @@
 import SwiftUI
 
 open class StackConfiguration {
+    
+    public init() {}
+    
     enum StackStyle {
         case sameHeight, decreasingHeight
     }

@@ -9,5 +9,5 @@
 import SwiftUI
 
 public protocol CardInformation: Identifiable {
-    var id: String { get }
+    public var id: String { get }
 }

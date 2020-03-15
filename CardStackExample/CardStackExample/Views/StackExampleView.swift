@@ -17,8 +17,10 @@ struct StackExampleView: View {
                  DataExample(id: UUID().uuidString, color: .orange)
     ]
     
+    let configuration = StackConfiguration()
+    
     var body: some View {
-        MainContainer<CardItemView, InfoExample>(configuration: nil, items: items)
+        CardStack<CardExampleView, DataExample>(configuration: nil, items: items)
     }
 }
 

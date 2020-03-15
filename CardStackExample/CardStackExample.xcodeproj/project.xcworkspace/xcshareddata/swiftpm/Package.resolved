@@ -5,9 +5,9 @@
         "package": "CardStack",
         "repositoryURL": "https://github.com/nhoogendoorn/CardStack",
         "state": {
-          "branch": null,
-          "revision": "83f24a02b82f8cb96f802c5c9bbed7616fd29b71",
-          "version": "0.1.0-beta.1"
+          "branch": "development",
+          "revision": "1d1295c86e02108834d8910fa774f735e2587d0b",
+          "version": null
         }
       }
     ]

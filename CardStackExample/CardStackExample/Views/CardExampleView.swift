@@ -9,7 +9,7 @@
 import SwiftUI
 import CardStack
 
-struct CardExampleView: View {
+struct CardExampleView: Card {
     var data: DataExample?
     
     init<CardData>(data: CardData) where CardData: CardInformation {

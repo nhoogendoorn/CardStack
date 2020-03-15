@@ -384,8 +384,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nhoogendoorn/CardStack";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = "0.1.0-beta.1";
+				branch = development;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

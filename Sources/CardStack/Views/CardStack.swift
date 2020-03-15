@@ -13,7 +13,7 @@ public struct CardStack<Content: Card, CardData: CardInformation>: View {
     var configuration: StackConfiguration?
     let items: [CardData]
 
-    init(configuration: StackConfiguration? = nil, items: [CardData]) {
+    public init(configuration: StackConfiguration? = nil, items: [CardData]) {
         self.configuration = configuration
         self.items = items
     }
