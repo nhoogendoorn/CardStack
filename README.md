@@ -5,4 +5,4 @@
 [![Git Version](https://img.shields.io/github/v/release/nhoogendoorn/CardStack.svg?style=for-the-badge)](https://github.com/nhoogendoorn/CardStack/releases)
 [![license](https://img.shields.io/github/license/nhoogendoorn/CardStack.svg?style=for-the-badge)](https://github.com/nhoogendoorn/CardStack/blob/master/LICENSE)
 
-A description of this package.
+A SwiftUI package that lets you implement swipable cards in your project.
