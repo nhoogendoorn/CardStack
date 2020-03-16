@@ -9,6 +9,7 @@
 import XCTest
 @testable import CardStack
 
+@available(iOS 13.0, *)
 class NavigationHelperTests: XCTestCase {
     
     func test_canMoveForward_currentIndexIsLowerThanTotalItems_returnTrue() {
