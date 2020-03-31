@@ -12,7 +12,7 @@ import CardStack
 struct CardExampleView: CardView {
     var data: DataExample?
     
-    init<CardData>(data: CardData) where CardData: CardData {
+    init<Data>(data: Data) where Data: CardData {
         if let infoData = data as? DataExample {
             self.data = infoData
         }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A626ED4A241E7B6D00CE6A68 /* CardStack in Frameworks */ = {isa = PBXBuildFile; productRef = A626ED49241E7B6D00CE6A68 /* CardStack */; };
+		A6A97FBE24339C5100FE5A2F /* CardStack in Frameworks */ = {isa = PBXBuildFile; productRef = A6A97FBD24339C5100FE5A2F /* CardStack */; };
 		A6F9714C241E639900374CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F9714B241E639900374CF8 /* AppDelegate.swift */; };
 		A6F9714E241E639900374CF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F9714D241E639900374CF8 /* SceneDelegate.swift */; };
 		A6F97152241E639E00374CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F97151241E639E00374CF8 /* Assets.xcassets */; };
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A626ED4A241E7B6D00CE6A68 /* CardStack in Frameworks */,
+				A6A97FBE24339C5100FE5A2F /* CardStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +116,7 @@
 			);
 			name = CardStackExample;
 			packageProductDependencies = (
-				A626ED49241E7B6D00CE6A68 /* CardStack */,
+				A6A97FBD24339C5100FE5A2F /* CardStack */,
 			);
 			productName = CardStackExample;
 			productReference = A6F97148241E639900374CF8 /* CardStackExample.app */;
@@ -147,7 +147,7 @@
 			);
 			mainGroup = A6F9713F241E639900374CF8;
 			packageReferences = (
-				A626ED48241E7B6D00CE6A68 /* XCRemoteSwiftPackageReference "CardStack" */,
+				A6A97FBC24339C5100FE5A2F /* XCRemoteSwiftPackageReference "CardStack" */,
 			);
 			productRefGroup = A6F97149241E639900374CF8 /* Products */;
 			projectDirPath = "";
@@ -376,20 +376,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A626ED48241E7B6D00CE6A68 /* XCRemoteSwiftPackageReference "CardStack" */ = {
+		A6A97FBC24339C5100FE5A2F /* XCRemoteSwiftPackageReference "CardStack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nhoogendoorn/CardStack";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "0.1.0-beta.1";
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A626ED49241E7B6D00CE6A68 /* CardStack */ = {
+		A6A97FBD24339C5100FE5A2F /* CardStack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A626ED48241E7B6D00CE6A68 /* XCRemoteSwiftPackageReference "CardStack" */;
+			package = A6A97FBC24339C5100FE5A2F /* XCRemoteSwiftPackageReference "CardStack" */;
 			productName = CardStack;
 		};
 /* End XCSwiftPackageProductDependency section */
