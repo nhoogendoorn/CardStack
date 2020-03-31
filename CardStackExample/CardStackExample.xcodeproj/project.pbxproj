@@ -109,6 +109,7 @@
 				A6F97144241E639900374CF8 /* Sources */,
 				A6F97145241E639900374CF8 /* Frameworks */,
 				A6F97146241E639900374CF8 /* Resources */,
+				A6A97FBF2433F44900FE5A2F /* Lint */,
 			);
 			buildRules = (
 			);
@@ -170,6 +171,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6A97FBF2433F44900FE5A2F /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workScripts/lint.sh\n../Scripts/lint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A6F97144241E639900374CF8 /* Sources */ = {

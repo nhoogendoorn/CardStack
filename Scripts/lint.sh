@@ -1,5 +1,5 @@
 #!/bin/sh
 
 if which swiftlint >/dev/null; then
-  swiftlint
+  swiftlint --config ../.swiftlint.yml
 fi

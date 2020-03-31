@@ -16,22 +16,7 @@ jobs:
     - stage: test
       name: Run Unit Tests (iOS, Xcode 11.3)
       osx_image: xcode11.3
-      script: Scripts/test.sh -d "OS=13.3,name=iPhone 11" -d "OS=12.24,name=iPhone X" -d "OS=11.4,name=iPhone SE"
-
-    - stage: test
-      name: Run Unit Tests (iOS, Xcode 11.2)
-      osx_image: xcode11.2
-      script: Scripts/test.sh -d "OS=13.2.2,name=iPhone 11"
-
-    - stage: test
-      name: Run Unit Tests (iOS, Xcode 11.1)
-      osx_image: xcode11.1
-      script: Scripts/test.sh -d "OS=13.1,name=iPhone 11"
-
-    - stage: test
-      name: Run Unit Tests (iOS, Xcode 11)
-      osx_image: xcode11
-      script: Scripts/test.sh -d "OS=13.0,name=iPhone 11"
+      script: Scripts/test.sh -d "OS=13.3,name=iPhone 11"
 
     - stage: test
       name: Run Validations (SwiftLint)
