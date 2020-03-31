@@ -9,7 +9,7 @@
 import Foundation
 @testable import CardStack
 
-struct MockCardInformation: CardInformation {
+struct MockCardInformation: CardData {
     var id: String = UUID().uuidString
 }
 

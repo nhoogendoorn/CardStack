@@ -9,8 +9,8 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct CardStackMainView<Content: Card, CardData: CardInformation>: View {
-    @EnvironmentObject var navigation: CardNavigation<CardData>
+struct CardStackMainView<Content: CardView, Data: CardData>: View {
+    @EnvironmentObject var navigation: CardNavigation<Data>
     @State var dragValue: CGPoint = .zero
     var configuration: StackConfiguration?
     
@@ -23,7 +23,7 @@ struct CardStackMainView<Content: Card, CardData: CardInformation>: View {
             // Reverse the item list so the first item in the list
             // will show in front.
             ForEach(navigation.reversedList, id: \.id) { item in
-                CardView<Content, CardData>(info: item,
+                CardContentView<Content, Data>(info: item,
                                             configuration: self.configuration ?? StackConfiguration.shared,
                                             dragValue: self.$dragValue)
             }

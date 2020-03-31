@@ -18,12 +18,12 @@ enum CardViewHelper {
     }
     
     
-    static func getCardSize<CardData: CardInformation>(
+    static func getCardSize<Data: CardData>(
         cardSize: CGSize,
         cardsShown: Int,
         currentIndex: Int,
-        items: [CardData],
-        item: CardData) -> CGSize
+        items: [Data],
+        item: Data) -> CGSize
     {
         let index = items.firstIndex(where: { $0.id == item.id })
         guard let foundIndex = index else { return .zero }
@@ -39,24 +39,22 @@ enum CardViewHelper {
             
             let indexDistance: CGFloat = CGFloat(foundIndex - currentIndex)
             let itemOffset = (indexDistance * -.cardDistance) * 2
-            print("abc foundIndex: \(foundIndex)")
             let width = cardSize.width + itemOffset
             let height = cardSize.height + itemOffset
             return CGSize(width: width, height: height)
         default:
-            print("abc Not foundindex: \(foundIndex)")
             return smallestItemSize
         }
     }
     
 
     
-    static func getCardBaseOffset<CardData: CardInformation>(
+    static func getCardBaseOffset<Data: CardData>(
         cardSize: CGSize,
         cardsShown: Int,
         currentIndex: Int,
-        items: [CardData],
-        currentItem: CardData) -> CGSize
+        items: [Data],
+        currentItem: Data) -> CGSize
     {
         guard
             let index = items.firstIndex(where: {
@@ -64,20 +62,17 @@ enum CardViewHelper {
             else { return .zero }
         
         if shouldShowOffscreen(currentIndex: currentIndex, itemIndex: index) {
-            print("Index \(index): \(CGSize(width: -(.screenWidth + cardSize.width), height: .zero))")
             return CGSize(width: -(.screenWidth + cardSize.width), height: .zero)
         }
                 
         switch index {
         case getTheVisibleIndexRange(currentIndex: currentIndex, cardsShown: cardsShown):
             let offset = CGFloat(index) * .cardDistance
-            print("Index \(index): \(CGSize(width: offset, height: .zero))")
             return CGSize(width: offset, height: .zero)
         default:
             let lastShownIndex = getLastShownIndexFrom(currentIndex: currentIndex,
                                                        cardsShown: cardsShown)
             let offset = CGFloat(lastShownIndex) * .cardDistance
-            print("Index \(index): \(CGSize(width: offset, height: .zero))")
             return CGSize(width: offset, height: .zero)
         }
     }
@@ -100,7 +95,7 @@ enum CardViewHelper {
     }
     
     
-    static func getCardDraggingOffset<CardData: CardInformation>(dragInfo: DragInformation<CardData>) -> CGSize {
+    static func getCardDraggingOffset<Data: CardData>(dragInfo: DragInformation<Data>) -> CGSize {
         guard
             dragInfo.items.indices.contains(dragInfo.currentIndex),
             dragInfo.items[dragInfo.currentIndex].id == dragInfo.item.id
@@ -114,11 +109,11 @@ enum CardViewHelper {
     }
         
     
-    static func getCardScaleSize<CardData: CardInformation>(
+    static func getCardScaleSize<Data: CardData>(
         cardsShown: Int,
         currentIndex: Int,
-        items: [CardData],
-        item: CardData) -> CGSize {
+        items: [Data],
+        item: Data) -> CGSize {
                 
         let index = items.firstIndex(where: { $0.id == item.id })
         guard let foundIndex = index else { return .zero }

@@ -1,5 +1,5 @@
 //
-//  CardView.swift
+//  CardContentView.swift
 //  CardStack
 //
 //  Created by Niels Hoogendoorn on 08/02/2020.
@@ -9,9 +9,9 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct CardView<Content: Card, CardData: CardInformation>: View {
-    @EnvironmentObject var navigation: CardNavigation<CardData>
-    let info: CardData
+struct CardContentView<Content: CardView, Data: CardData>: View {
+    @EnvironmentObject var navigation: CardNavigation<Data>
+    let info: Data
     let configuration: StackConfiguration
     
     @State var didAppear: Bool = false
@@ -23,7 +23,7 @@ struct CardView<Content: Card, CardData: CardInformation>: View {
     }
     @Binding var dragValue: CGPoint
     
-    init(info: CardData, configuration: StackConfiguration, dragValue: Binding<CGPoint>) {
+    init(info: Data, configuration: StackConfiguration, dragValue: Binding<CGPoint>) {
         self.info = info
         self.configuration = configuration
         self._dragValue = dragValue
@@ -70,7 +70,6 @@ struct CardView<Content: Card, CardData: CardInformation>: View {
                                     currentIndex: navigation.currentIndex,
                                     items: navigation.items,
                                     item: info)
-        print("xxx SIZE: \(size)")
         return size
     }
     

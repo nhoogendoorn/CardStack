@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct DragInformation<CardData: CardInformation> {
+struct DragInformation<Data: CardData> {
     let currentIndex: Int
-    let items: [CardData]
-    let item: CardData
+    let items: [Data]
+    let item: Data
     let dragValue: CGPoint
 }

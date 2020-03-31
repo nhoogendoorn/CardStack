@@ -9,15 +9,15 @@
 import Foundation
 
 @available(iOS 13.0, *)
-open class CardNavigation<CardData: CardInformation>: ObservableObject {
+open class CardNavigation<Data: CardData>: ObservableObject {
     @Published var currentIndex: Int = .zero
-    @Published var items: [CardData] = []
+    @Published var items: [Data] = []
     
-    var reversedList: [CardData] {
+    var reversedList: [Data] {
         items.reversed()
     }
     
-    init(items: [CardData]) {
+    init(items: [Data]) {
         self.items = items
     }
     

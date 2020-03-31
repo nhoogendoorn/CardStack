@@ -9,7 +9,7 @@
 import SwiftUI
 import CardStack
 
-struct DataExample: CardInformation {
+struct DataExample: CardData {
     var id: String
     var color: Color
 }
