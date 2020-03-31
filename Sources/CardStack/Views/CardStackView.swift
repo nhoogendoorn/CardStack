@@ -1,5 +1,5 @@
 //
-//  CardStack.swift
+//  CardStackView.swift
 //  CardStack
 //
 //  Created by Niels Hoogendoorn on 08/02/2020.
@@ -9,7 +9,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-public struct CardStack<Content: Card, CardData: CardInformation>: View {
+public struct CardStackView<Content: Card, CardData: CardInformation>: View {
     var configuration: StackConfiguration?
     let items: [CardData]
 
