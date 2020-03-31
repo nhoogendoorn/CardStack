@@ -9,7 +9,7 @@ stages:
 
 branches:
   only:
-  - development
+  - master
 
 jobs:
   include:
