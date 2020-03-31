@@ -28,25 +28,25 @@ The preferred way of installing CardStack is via the [Swift Package Manager](htt
 
 > For a full example see the example project.
 
-Initialize a CardStack view by passing a Card and CardInformation. Card is a protocol that inherits from View and CardInformation is a protocol that inherits from Identifiable.
+Initialize a CardStack view by passing a CardView and CardData. CardView is a protocol that inherits from View and CardData is a protocol that inherits from Identifiable.
 
-### CardInformation
+### CardData
 
-The CardInformation data object just needs to have an id, but can for the rest contain any type of data.
+The CardData object just needs to have an id, but can for the rest contain any type of data.
 
 ```swift
 import SwiftUI
 import CardStack
 
-struct DataExample: CardInformation {
+struct DataExample: CardData {
     var id: String
     var color: Color
 }
 ```
 
-### Card
+### CardView
 
-The Card View will have access to the data you define as CardInformation.
+The Card View will have access to the data you define as CardData.
 
 ```swift
 import SwiftUI
@@ -55,7 +55,7 @@ import CardStack
 struct CardExampleView: Card {
     var data: DataExample?
     
-    init<CardData>(data: CardData) where CardData: CardInformation {
+    init<CardData>(data: CardData) where CardData: CardData {
         if let infoData = data as? DataExample {
             self.data = infoData
         }
@@ -70,7 +70,7 @@ struct CardExampleView: Card {
 }
 ```
 
-### CardStack
+### CardStackView
 
 The CardStack is the main container for all the cards.
 

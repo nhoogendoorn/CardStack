@@ -1,5 +1,5 @@
 //
-//  CardInformation.swift
+//  Card.swift
 //  CardStack
 //
 //  Created by Niels Hoogendoorn on 14/03/2020.
@@ -8,6 +8,6 @@
 
 import SwiftUI
 
-public protocol CardInformation: Identifiable {
-    var id: String { get }
+public protocol CardView: View {
+    init<Data: CardData>(data: Data)
 }
