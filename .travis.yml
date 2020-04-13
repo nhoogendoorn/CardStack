@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode11.3
+osx_image: xcode11.4
 
 git:
   depth: 1
@@ -15,21 +15,21 @@ jobs:
   include:
     - stage: test
       name: Run Unit Tests (iOS, Xcode 11.3)
-      osx_image: xcode11.3
+      osx_image: xcode11.4
       script: Scripts/test.sh -d "OS=13.3,name=iPhone 11"
 
     - stage: test
       name: Run Validations (SwiftLint)
-      osx_image: xcode11.3
+      osx_image: xcode11.4
       install: Scripts/install_swiftlint.sh
       script: Scripts/validate.sh
 
     - stage: test
       name: Build Demo Project
-      osx_image: xcode11.3
+      osx_image: xcode11.4
       script: Scripts/validate_demo.sh
 
     - stage: test
       name: Swift Build (Swift Package Manager)
-      osx_image: xcode11.3
+      osx_image: xcode11.4
       script: swift build
