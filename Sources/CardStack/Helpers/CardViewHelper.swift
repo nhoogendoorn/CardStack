@@ -17,14 +17,12 @@ enum CardViewHelper {
         return CGSize(width: width, height: height)
     }
     
-    
     static func getCardSize<Data: CardData>(
         cardSize: CGSize,
         cardsShown: Int,
         currentIndex: Int,
         items: [Data],
-        item: Data) -> CGSize
-    {
+        item: Data) -> CGSize {
         let index = items.firstIndex(where: { $0.id == item.id })
         guard let foundIndex = index else { return .zero }
         let smallestItemSize = getSmallestItemSize(cardSize: cardSize,
@@ -47,15 +45,12 @@ enum CardViewHelper {
         }
     }
     
-
-    
     static func getCardBaseOffset<Data: CardData>(
         cardSize: CGSize,
         cardsShown: Int,
         currentIndex: Int,
         items: [Data],
-        currentItem: Data) -> CGSize
-    {
+        currentItem: Data) -> CGSize {
         guard
             let index = items.firstIndex(where: {
                 $0.id == currentItem.id })
@@ -77,13 +72,11 @@ enum CardViewHelper {
         }
     }
     
-    
     static func shouldShowOffscreen(currentIndex: Int, itemIndex: Int) -> Bool {
         // If the index is lower than the current index it should move to the
         // left side of the screen so that it is invisible.
         itemIndex < currentIndex
     }
-    
     
     static func getTheVisibleIndexRange(currentIndex: Int, cardsShown: Int) -> ClosedRange<Int> {
         let lastShownIndex = getLastShownIndexFrom(currentIndex: currentIndex, cardsShown: cardsShown) - 1
@@ -94,7 +87,6 @@ enum CardViewHelper {
         currentIndex + cardsShown
     }
     
-    
     static func getCardDraggingOffset<Data: CardData>(dragInfo: DragInformation<Data>) -> CGSize {
         guard
             dragInfo.items.indices.contains(dragInfo.currentIndex),
@@ -103,12 +95,10 @@ enum CardViewHelper {
         return CGSize(width: -dragInfo.dragValue.x, height: 0)
     }
     
-    
     static func getListOffset(currentIndex: Int) -> CGFloat {
         return CGFloat(currentIndex) * -.cardDistance
     }
         
-    
     static func getCardScaleSize<Data: CardData>(
         cardsShown: Int,
         currentIndex: Int,

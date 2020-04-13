@@ -18,7 +18,6 @@ public struct CardStackView<Content: CardView, Data: CardData>: View {
         self.items = items
     }
     
-    @available(OSX 10.15.0, *)
     public var body: some View {
         CardStackMainView<Content, Data>(configuration: configuration)
             .animation(.default)

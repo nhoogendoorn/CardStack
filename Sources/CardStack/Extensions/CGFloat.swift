@@ -6,7 +6,7 @@
 //  Copyright © 2020 Nihoo. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 
 @available(iOS 13.0, *)
 extension CGFloat {
