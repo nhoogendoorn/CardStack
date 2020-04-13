@@ -1,5 +1,5 @@
 language: swift
-os: osx
+osx_image: xcode11.3
 
 git:
   depth: 1
