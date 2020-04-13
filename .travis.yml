@@ -32,4 +32,4 @@ jobs:
     - stage: test
       name: Swift Build (Swift Package Manager)
       osx_image: xcode11.4
-      script: swift build
+      script: Scripts/build.sh
