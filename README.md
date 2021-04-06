@@ -99,6 +99,9 @@ struct StackExampleView: View {
 In the configuration file you can set the following parameters:
 
 ```
+/// Sets the index the card list should start with. Setting it to 3, would show the card for index 3 for example when the View loads. Default value is `0`..
+var startIndex: Int = 0
+
 /// The minimum swiping distance before the dragging starts.
 var minimumSwipingDistance: CGFloat = 0
 

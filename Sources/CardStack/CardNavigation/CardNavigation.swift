@@ -16,9 +16,14 @@ open class CardNavigation<Data: CardData>: ObservableObject {
     var reversedList: [Data] {
         items.reversed()
     }
-    
-    init(items: [Data]) {
+
+    init(items: [Data], startIndex: Int) {
+        guard items.indices.contains(startIndex) else {
+            assertionFailure("Start index out of bounds")
+            return
+        }
         self.items = items
+        self.currentIndex = startIndex
     }
     
     func move(_ direction: HorizontalDirection) {

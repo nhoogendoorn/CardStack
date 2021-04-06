@@ -9,9 +9,17 @@
 import SwiftUI
 
 open class StackConfiguration {
-    
-    public init() {}
-    
+    public init(startIndex: Int = 0,
+                minimumSwipingDistance: CGFloat = 0,
+                numberOfCardsShown: Int = 3) {
+        self.startIndex = startIndex
+        self.minimumSwipingDistance = minimumSwipingDistance
+        self.numberOfCardsShown = numberOfCardsShown
+    }
+
+    /// Sets the index the card list should start with. Setting it to 3, would show the card for index 3 for example when the View loads. Default value is `0`..
+    var startIndex: Int = 0
+
     /// The minimum swiping distance before the dragging starts.
     var minimumSwipingDistance: CGFloat = 0
 

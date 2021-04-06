@@ -20,7 +20,7 @@ struct StackExampleView: View {
     let configuration = StackConfiguration()
     
     var body: some View {
-        CardStackView<CardExampleView, DataExample>(configuration: nil, items: items)
+        CardStackView<CardExampleView, DataExample>(configuration: configuration, items: items)
     }
 }
 

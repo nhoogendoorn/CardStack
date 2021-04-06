@@ -22,6 +22,7 @@ public struct CardStackView<Content: CardView, Data: CardData>: View {
         CardStackMainView<Content, Data>(configuration: configuration)
             .animation(.default)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .environmentObject(CardNavigation(items: items))
+            .environmentObject(CardNavigation(items: items,
+                                              startIndex: configuration?.startIndex ?? 0))
     }
 }
