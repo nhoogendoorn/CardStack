@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
 enum CardViewHelper {
     static func getSmallestItemSize(cardSize: CGSize, itemsShown: Int) -> CGSize {
         guard cardSize != .zero, itemsShown > .zero else { return .zero }

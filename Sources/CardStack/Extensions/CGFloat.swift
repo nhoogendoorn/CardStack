@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
 extension CGFloat {
     static let screenWidth: CGFloat = UIScreen.main.bounds.width
     static let cardDistance: CGFloat = 15

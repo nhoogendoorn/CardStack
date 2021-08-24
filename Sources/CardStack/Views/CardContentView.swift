@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
 struct CardContentView<Content: CardView, Data: CardData>: View {
     @EnvironmentObject var navigation: CardNavigation<Data>
     let info: Data

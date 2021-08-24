@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
 extension DragGesture.Value {
     func getSwipeDirection(minimumDistance: CGFloat = .zero) -> HorizontalDirection {
         if isSwipingForward(minimumDistance: minimumDistance) {

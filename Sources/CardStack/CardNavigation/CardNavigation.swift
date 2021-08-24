@@ -8,7 +8,6 @@
 
 import Foundation
 
-@available(iOS 13.0, *)
 open class CardNavigation<Data: CardData>: ObservableObject {
     @Published var currentIndex: Int = .zero
     @Published var items: [Data] = []

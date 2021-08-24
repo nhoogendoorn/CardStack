@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
 public struct CardStackView<Content: CardView, Data: CardData>: View {
     var configuration: StackConfiguration?
     let items: [Data]

@@ -8,7 +8,6 @@
 import XCTest
 @testable import CardStack
 
-@available(iOS 13.0, *)
 extension CardViewHelperTests {
     func test_getCardSize_size200cardsShown3currentIndex0_itemIdx0_return200() {
         let sut = CardViewHelper.getCardSize(cardSize: cardSize,

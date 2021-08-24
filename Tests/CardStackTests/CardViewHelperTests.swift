@@ -9,7 +9,6 @@
 import XCTest
 @testable import CardStack
 
-@available(iOS 13.0, *)
 class CardViewHelperTests: XCTestCase {
     let cardSize = CGSize(width: 200, height: 200)
     
