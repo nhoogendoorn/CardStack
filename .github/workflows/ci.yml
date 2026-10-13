@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test (macOS)
+        run: swift test
+
+      - name: Build package (iOS)
+        run: xcodebuild build -scheme CardStack -destination 'generic/platform=iOS Simulator'
+
+      - name: Build example app
+        run: xcodebuild build -project CardStackExample/CardStackExample.xcodeproj -scheme CardStackExample -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO
+
+  lint:
+    runs-on: ubuntu-latest
+    container: ghcr.io/realm/swiftlint:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: SwiftLint
+        run: swiftlint lint --strict
