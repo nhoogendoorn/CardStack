@@ -1,0 +1,9 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Card %lld of %lld" : {
+      "comment" : "VoiceOver value for the card stack. The first number is the current card, the second the total number of cards."
+    }
+  },
+  "version" : "1.0"
+}
